@@ -8,10 +8,10 @@ export default function Add() {
         directions: ''
     }
 
-    const [formState, setFormState] = useState(initialFormState)
+    const [values, setValues] = useState(initialFormState)
 
     function handleChange(event) {
-        setFormState({ ...formState, [event.target.id]: event.target.value })
+        setValues({ ...formState, [event.target.id]: event.target.value })
     }
 
     const handleSubmit = async (e) => {
@@ -19,17 +19,38 @@ export default function Add() {
         try {
             const response = await fetch('http://localhost:4000/recipes', {
                 method: "POST",
-                body: JSON.stringify(formState),
+                body: JSON.stringify(values),
                 headers: {
                     "Content-Type": "application/json"
                 }
             })
             if (response.status === 201) {
-                setFormState(initialFormState)
-                getBookmarkData();
+                setValues(initialFormState)
+                //GET RECPIES?//
             }
         } catch (err) {
             console.log(err)
         }
     }
+
+    return (
+        <form onSubmit={handleSubmit}>
+            <div>
+                <label htmlFor="title">Title</label>
+                <input type="text" required id="title" value={values.title} onChange={handleChange}/>
+            </div>
+            <div>
+                <label htmlFor="cuisineType">Cuisine Type</label>
+                <input type="text" required id="cuisineType" value={values.cuisineType} onChange={handleChange}/>
+            </div>
+            <div>
+                <label htmlFor="ingredients">Ingredients</label>
+                <input type="text" required id="ingredients" value={values.ingredients} onChange={handleChange}/>
+            </div>
+            <div>
+                <label htmlFor="directions">Directions</label>
+                <input type="text" required id="directions" value={values.directions} onChange={handleChange}/>
+            </div>
+        </form>
+    )
 }
