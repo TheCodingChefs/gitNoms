@@ -9,6 +9,7 @@ function App() {
         <h1>Woo-Sik</h1>
         <h1>Dr. Pepper</h1>
         <h1>Lemonade</h1>
+        <h1>Stella Artois</h1>
     </div>
   );
 }
