@@ -1,17 +1,19 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
  
-const directions = props.directions.split('*');
 
-const recipe = (props) => {
+const recipe = ({recipe}) => {
+
+    const directions = recipe.directions.split('*');
+
     return (
         <Card style={{ width: '18rem' }}>
         <Card.Body>
-            <Card.Title>{props.title}</Card.Title>
-            <Card.Subtitle className="mb-2 text-muted">{props.cuisineType}</Card.Subtitle>
+            <Card.Title>{recipe.title}</Card.Title>
+            <Card.Subtitle className="mb-2 text-muted">{recipe.cuisineType}</Card.Subtitle>
             <Card.Text>
                 <ul>
-                   {props.ingredients.map((ingredient) => {
+                   {recipe.ingredients.map((ingredient) => {
                        return(
                            <li className="ingredient">{ingredient}</li>
                        )
