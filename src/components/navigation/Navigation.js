@@ -1,7 +1,16 @@
 import { Nav, Navbar, Container } from "react-bootstrap";
 import logo from '../../assets/logolight.png'
+import { useState } from 'react';
+import { useHistory } from "react-router";
 
-export default function Navigation() {
+import Search from "../search/Search";
+
+export default function Navigation( {setSearch} ) {
+
+    const history = useHistory();
+
+    // const [search, setSearch] = useState('');
+
     return (
         <Navbar bg="light">
             <Container>
@@ -13,7 +22,12 @@ export default function Navigation() {
                     <Nav.Link href="#search">Advanced Search</Nav.Link>
                     <Nav.Link href="#add">Add</Nav.Link>
                     <Nav.Link href="#about">About</Nav.Link>
-                    <input placeholder='Search via keyword'type="text" />
+                    <form onSubmit={(e) => {
+                        e.preventDefault();
+                        history.push('/search-results')
+                    }} action="">
+                        <input onChange={(e)=> {setSearch(e.target.value)}} placeholder='Search via keyword'type="text" />
+                    </form>
                 </Nav>
             </Container>
         </Navbar>
