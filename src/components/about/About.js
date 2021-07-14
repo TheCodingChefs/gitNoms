@@ -4,6 +4,7 @@ function About () {
             <div className='gitNoms'>
                 <h2>gitNoms</h2>
                 <p>
+                    test
                 </p>
             </div>
             <div className='theCodingChefs'>
