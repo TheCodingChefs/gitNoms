@@ -11,7 +11,7 @@ export default function Add() {
     const [values, setValues] = useState(initialFormState)
 
     function handleChange(event) {
-        setValues({ ...formState, [event.target.id]: event.target.value })
+        setValues({ ...values, [event.target.id]: event.target.value })
     }
 
     const handleSubmit = async (e) => {
@@ -51,6 +51,7 @@ export default function Add() {
                 <label htmlFor="directions">Directions</label>
                 <input type="text" required id="directions" value={values.directions} onChange={handleChange}/>
             </div>
+            <input type='submit' value='Add Recipe' />
         </form>
     )
 }
