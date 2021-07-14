@@ -9,7 +9,12 @@ function About () {
         <div className='about'>
             <div className='gitNoms'>
                 <h2>gitNoms</h2>
+
+                <p>
+                    test
+
                 <p>Living in this pandemic world, more and more people are becoming the home cook. The gitNoms is an online recipe application. Users can easily upload, edit, or delete their own receipes. The gitNoms is built by the Coding Chefs from 4 different time zones!
+
                 </p>
             </div>
             <div className='theCodingChefs'>
