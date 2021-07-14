@@ -12,6 +12,7 @@ const recipe = ({recipe}) => {
             <Card.Title>{recipe.title}</Card.Title>
             <Card.Subtitle className="mb-2 text-muted">{recipe.cuisineType}</Card.Subtitle>
             <Card.Text>
+                <p>Ingredients:</p>
                 <ul>
                    {recipe.ingredients.map((ingredient) => {
                        return(
@@ -19,10 +20,11 @@ const recipe = ({recipe}) => {
                        )
                    })} 
                 </ul>
+                <p>Directions:</p>
                 <ul>
                     {directions.map((direction) => {
                         return(
-                            <li className="direction">{direction}</li>
+                            <li className="direction">{direction.charAt(0).toUpperCase() + direction.slice(1)}</li>
                         )
                     })}
                 </ul>
