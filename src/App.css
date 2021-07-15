@@ -22,7 +22,12 @@ body {
 .recipe-container {
     display: flex;
     flex-direction: row;
+<<<<<<< HEAD
 }
+=======
+
+
+>>>>>>> Make modal
 /* component Add */
 
 .addContainer, .submit {
