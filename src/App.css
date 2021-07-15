@@ -19,3 +19,13 @@ body {
     align-items: center;
     flex-direction: column;
 }
+
+
+/* component Add */
+
+.addContainer, .submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}

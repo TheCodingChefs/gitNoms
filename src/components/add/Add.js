@@ -36,25 +36,27 @@ export default function Add() {
 
     return (
         <form onSubmit={handleSubmit}>
-            <div>
+            <div className="addContainer">
                 <label htmlFor="title">Title</label>
                 <input type="text" required id="title" value={values.title} onChange={handleChange}/>
             </div>
-            <div>
+            <div className="addContainer">
                 <label htmlFor="cuisineType">Cuisine Type</label>
                 <input type="text" required id="cuisineType" value={values.cuisineType} onChange={handleChange}/>
             </div>
-            <div>
+            <div className="addContainer">
                 <label htmlFor="ingredients">Ingredients</label>
                 <input type="text" required id="ingredients" value={values.ingredients} onChange={handleChange}/>
             </div>
-            <div>
-                <label htmlFor="directions">Directions</label>
-                <input type="text" required id="directions" value={values.directions} onChange={handleChange}/>
+            <div className="addContainer">
+                <label htmlFor="directions">Directions</label >
+                <input type="text"  required id="directions" value={values.directions} onChange={handleChange} />
                 <p>Format Directions with an Asterisk between each step.</p>
-                <p>Example: Direction number one*Direction number two*Direction number three*etc...</p>
+                <p >Example: Direction number one*Direction number two*Direction number three*etc...</p>
             </div>
+            <div className="submit">
             <input type='submit' value='Add Recipe' />
+            </div>
         </form>
     )
 }
