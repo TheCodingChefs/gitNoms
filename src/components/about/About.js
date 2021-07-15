@@ -5,6 +5,10 @@ import collenProfile from '../../assets/collenProfile.jpg'
 import anselemProfile from '../../assets/anselemProfile.png'
 
 function About() {
+    const today = new Date();
+    const utcHr = today.getUTCHours();
+    const utcMin = today.getUTCMinutes();
+
     return (
         <div className='about'>
             <div className='gitNoms'>
@@ -22,25 +26,25 @@ function About() {
                         <img src={stevenProfile} alt='steven profile picture' width='150px' height='150px' />
                         <h3>Steven Semco</h3>
                         <h5>Colorado Springs, CO</h5>
-                        <h5>MT</h5>
+                        <h5>{utcHr-6+':'+utcMin+' '}MT</h5>
                     </div>
                     <div className='woosik'>
                         <img src={woosikProfile} alt='woo-sik profile picture' width='150px' height='150px' />
                         <h3>Woo-Sik Choi</h3>
                         <h5>Austin, TX</h5>
-                        <h5>CT</h5>
+                        <h5>{utcHr-5+':'+utcMin+' '}CT</h5>
                     </div>
                     <div className='collen'>
                         <img src={collenProfile} alt='collen profile picture' width='150px' height='150px' />
                         <h3>Collen Whitney</h3>
                         <h5>Harrisonburg, VA</h5>
-                        <h5>ET</h5>
+                        <h5>{utcHr-4+':'+utcMin+' '}ET</h5>
                     </div>
                     <div className='anselem'>
                         <img src={anselemProfile} alt='anselem profile picture' width='150px' height='150px' />
                         <h3>Anselem Ogbennia</h3>
                         <h5>Los Angeles, CA</h5>
-                        <h5>PT</h5>
+                        <h5>{utcHr-7+':'+utcMin+' '}PT</h5>
                     </div>
                 </div>
             </div>
