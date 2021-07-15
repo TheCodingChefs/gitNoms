@@ -18,10 +18,10 @@ function App() {
     <div className="App">
 
 
-        <Navigation setSearch={setSearch} />
+        <Navigation setSearch={setSearch} search ={search} />
         {/* <Display /> */}
 
-        <Route path='/search-results' exact render={() => <Search search={search} /> }/>
+        <Route path={`/${search}`} exact render={() => <Search search={search} /> }/>
         <Route path='/' exact component= {Display} />
         <Route path='/about' exact component= {About} />
         <Route path='/add' component={Form}/>
