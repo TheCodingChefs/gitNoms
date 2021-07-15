@@ -6,7 +6,8 @@ export default function Add() {
         title: '',
         cuisineType: '',
         ingredients: '',
-        directions: ''
+        directions: '',
+        author: ''
     }
 
     const [values, setValues] = useState(initialFormState)
@@ -44,15 +45,22 @@ export default function Add() {
                 <label htmlFor="cuisineType">Cuisine Type</label>
                 <input type="text" required id="cuisineType" value={values.cuisineType} onChange={handleChange}/>
             </div>
+            <div className="formatting-directions">
+                <p>Format Ingredients and Directions with an Asterisk between each item/step.</p>  
+            </div>
             <div>
                 <label htmlFor="ingredients">Ingredients</label>
                 <input type="text" required id="ingredients" value={values.ingredients} onChange={handleChange}/>
+                <p>Example: Ingredient One*Ingredient Two*Ingredient Three*etc...</p>
             </div>
             <div>
                 <label htmlFor="directions">Directions</label>
                 <input type="text" required id="directions" value={values.directions} onChange={handleChange}/>
-                <p>Format Directions with an Asterisk between each step.</p>
                 <p>Example: Direction number one*Direction number two*Direction number three*etc...</p>
+            </div>
+            <div>
+                <label htmlFor="author">Author</label>
+                <input type="text" id="author" value={values.author} onChange={handleChange}/>
             </div>
             <input type='submit' value='Add Recipe' />
         </form>
