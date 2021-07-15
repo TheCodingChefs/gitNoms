@@ -24,20 +24,35 @@ const Recipe = ({recipe}) => {
         Launch demo modal
       </Button> */}
 
-      <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
-          <Button variant="primary" onClick={handleClose}>
-            Save Changes
-          </Button>
-        </Modal.Footer>
-      </Modal>
+        <Modal show={show} onHide={handleClose}>
+            <Modal.Header closeButton>
+            <Modal.Title>{recipe.title}</Modal.Title>
+            </Modal.Header>
+            <Modal.Body><p>Ingredients:</p>
+                <ul>
+                   {ingredients.map((ingredient) => {
+                       return(
+                           <li className="ingredient">{ingredient.charAt(0).toUpperCase() + ingredient.slice(1)}</li>
+                       )
+                   })} 
+                </ul>
+                <p>Directions:</p>
+                <ol>
+                    {directions.map((direction) => {
+                        return(
+                            <li className="direction">{direction.charAt(0).toUpperCase() + direction.slice(1)}</li>
+                        )
+                    })}
+                </ol></Modal.Body>
+            <Modal.Footer>
+            <Button variant="danger" onClick={handleClose}>
+                Delete
+            </Button>
+            <Button variant="secondary" onClick={handleClose}>
+                Edit
+            </Button>
+            </Modal.Footer>
+        </Modal>
 
 
 
