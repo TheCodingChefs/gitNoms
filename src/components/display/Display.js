@@ -23,7 +23,7 @@ const Display = () => {
 
     }, []);
     return (
-        <div>
+        <div className="recipe-container">
             {recipeData.map((recipe) => {
                 return(
                     <Recipe recipe={recipe} />
