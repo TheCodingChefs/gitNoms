@@ -1,6 +1,8 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Modal from 'react-bootstrap/Modal';
+import thumbsup from '../../../assets/thumbsup.png'
+import thumbsdown from '../../../assets/thumbsdown.png'
 
 import Edit from '../../edit/Edit';
  
@@ -124,7 +126,9 @@ const Recipe = ({recipe, getRecipes}) => {
                         )
                     })}
                 </ol>
-            </Card.Text>           
+            </Card.Text>
+            <Card.Img variant="bottom" src={thumbsup} alt="thumbs up" style={{ width: '30px' }} className="rating-left"/>
+            <Card.Img variant="bottom" src={thumbsdown} alt="thumbs down"  style={{ width: '30px' }} className="rating-right"/>
         </Card.Body>
         </Card>
         </>
