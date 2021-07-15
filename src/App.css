@@ -9,6 +9,7 @@ body {
     padding: 30px;
     margin: 60px;
 }
+
 .teamMembers {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -18,6 +19,11 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    border: 2px solid black;
+    margin: 10px 10px 0 10px;
+    border-radius: 15px;
+    background-color: white;
+    padding: 0 10px 0 10px;
 }
 .recipe-container {
     display: grid;
@@ -51,4 +57,16 @@ body {
 
 .add-form {
     margin-top: 100px;
+}
+
+.about-text {
+    font-size: 3vh;
+    margin: 10px 40px 10px 40px;
+}
+
+.profile-img {
+    border: 2px solid black;
+    border-radius: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
