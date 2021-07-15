@@ -8,9 +8,7 @@ import Search from './components/search/Search';
 import { useState } from 'react';
 import { Route } from 'react-router-dom'
 
-import { Route } from 'react-router-dom'
-import Navigation from './components/navigation/Navigation';
-import Display from './components/display/Display'
+
 import Form from './components/add/Add'
 
 
