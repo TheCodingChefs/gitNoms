@@ -6,10 +6,18 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 30px;
-    margin: 60px;
 }
-
+.gitNoms {
+    padding: 30px;
+    margin: 100px 60px;
+}
+.theCodingChefs {
+    padding: 30px;
+    margin: 60px
+}
+.theCodingChefs h2, .gitNoms h2 {
+    padding: 50px;
+}
 .teamMembers {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
