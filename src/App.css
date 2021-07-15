@@ -97,3 +97,9 @@ body {
     max-width: 1200px;
     padding: 1rem;
 }
+
+.recipe-form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
