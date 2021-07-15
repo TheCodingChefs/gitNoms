@@ -14,7 +14,7 @@ export default function Navigation( {setSearch, search} ) {
     return (
         <Navbar bg="dark" variant="dark" fixed="top">
             <Container>
-                <Navbar.Brand href="#home">
+                <Navbar.Brand href="/">
                     <img src={logo} width="50%" alt="logo"/>
                 </Navbar.Brand>
                 <Nav className="navigation-bar">
