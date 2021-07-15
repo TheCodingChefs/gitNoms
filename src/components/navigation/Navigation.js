@@ -21,7 +21,7 @@ export default function Navigation( {setSearch} ) {
                     <Nav.Link href="#home">Home</Nav.Link>
                     <Nav.Link href="#search">Advanced Search</Nav.Link>
                     <Nav.Link href="#add">Add</Nav.Link>
-                    <Nav.Link href="#about">About</Nav.Link>
+                    <Nav.Link href="/about">About</Nav.Link>
                     <form onSubmit={(e) => {
                         e.preventDefault();
                         history.push('/search-results')
