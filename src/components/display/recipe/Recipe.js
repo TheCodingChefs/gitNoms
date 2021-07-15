@@ -1,14 +1,50 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
- 
+import Modal from 'react-bootstrap/Modal';
 
-const recipe = ({recipe}) => {
+ 
+import { useState } from 'react';
+
+const Recipe = ({recipe}) => {
+
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
+    const [currentId, setCurrentId] = useState('');
 
     const directions = recipe.directions.split('*');
     const ingredients = recipe.ingredients.split('*');
 
     return (
-        <Card style={{ width: '18rem' }}>
+
+        <>
+        {/* <Button variant="primary" onClick={handleShow}>
+        Launch demo modal
+      </Button> */}
+
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Modal heading</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
+          <Button variant="primary" onClick={handleClose}>
+            Save Changes
+          </Button>
+        </Modal.Footer>
+      </Modal>
+
+
+
+        <Card
+            onClick={handleShow}
+            id={recipe._id}
+            style={{ width: '18rem' }}>
         <Card.Body>
             <Card.Title>{recipe.title}</Card.Title>
             <Card.Subtitle className='author'>By: {recipe.author}</Card.Subtitle>
@@ -33,7 +69,8 @@ const recipe = ({recipe}) => {
             </Card.Text>           
         </Card.Body>
         </Card>
+        </>
     );
 };
 
-export default recipe;
+export default Recipe;
