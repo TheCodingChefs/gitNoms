@@ -9,6 +9,8 @@ const Search = ({search}) => {
     const [results, setResults] = useState([]);
     const [filterResults, setFilterResults] = useState([]);
 
+    const [temp, setTemp] = useState([]);
+
     const getRecipes = async () => {
         try {
             const res = await fetch (API_URL);
@@ -42,6 +44,7 @@ const Search = ({search}) => {
 
             console.log(newArr);
             setFilterResults(newArr);
+            setTemp(newArr)
         }
 
         filterByName(results);
@@ -53,8 +56,10 @@ const Search = ({search}) => {
             const newArr = arr.filter(function (el) {
                 return el.ingredients.toLowerCase().includes(search.toLowerCase())
             })
-            setFilterResults([...filterResults, newArr]);
-                
+            console.log(newArr);
+            setFilterResults(newArr);
+            //    setTemp(newArr) 
+            //    console.log(temp);
             }
         
             filterByIngredient(results)
