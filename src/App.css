@@ -22,4 +22,16 @@ body {
 .recipe-container {
     display: flex;
     flex-direction: row;
+
+/* component Add */
+
+.addContainer, .submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.submit {
+    margin: 1rem auto;
 }
