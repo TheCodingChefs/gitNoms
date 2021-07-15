@@ -46,7 +46,22 @@ const Search = ({search}) => {
 
         filterByName(results);
 
-    }, [results])
+        const filterByIngredient = (arr) => {
+
+            if (arr.length === 0) return;
+
+            const newArr = arr.filter(function (el) {
+                return el.ingredients.toLowerCase().includes(search.toLowerCase())
+            })
+            setFilterResults([...filterResults, newArr]);
+                
+            }
+        
+            filterByIngredient(results)
+        
+
+    }, [results]);
+
 
     return (
         <div className="search-results">
