@@ -26,7 +26,7 @@ const Display = () => {
         <div className="recipe-container">
             {recipeData.map((recipe) => {
                 return(
-                    <Recipe recipe={recipe} />
+                    <Recipe getRecipes= {getRecipes}recipe={recipe} />
                 )
             })}
         </div>
