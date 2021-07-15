@@ -31,7 +31,7 @@ export default function Add() {
                 }
             })
             if (response.status === 201) {
-                history.pushState('/');
+                history.push('/');
                 setValues(initialFormState)
                 //GET RECPIES?//
             }
