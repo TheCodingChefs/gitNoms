@@ -5,7 +5,7 @@ import Card from 'react-bootstrap/Card';
 const recipe = ({recipe}) => {
 
     const directions = recipe.directions.split('*');
-    const ingredients = recipe.directions.split('*');
+    const ingredients = recipe.ingredients.split('*');
 
     return (
         <Card style={{ width: '18rem' }}>
@@ -18,7 +18,7 @@ const recipe = ({recipe}) => {
                 <ul>
                    {ingredients.map((ingredient) => {
                        return(
-                           <li className="ingredient">{ingredient}</li>
+                           <li className="ingredient">{ingredient.charAt(0).toUpperCase() + ingredient.slice(1)}</li>
                        )
                    })} 
                 </ul>
