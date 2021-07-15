@@ -24,7 +24,7 @@ function App() {
         <Route path='/search-results' exact render={() => <Search search={search} /> }/>
         <Route path='/' exact component= {Display} />
         <Route path='/about' exact component= {About} />
-        {/* <Route path='/add' component={Form}/> */}
+        <Route path='/add' component={Form}/>
 
     </div>
   );
