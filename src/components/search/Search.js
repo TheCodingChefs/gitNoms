@@ -49,7 +49,7 @@ const Search = ({search}) => {
     }, [results])
 
     return (
-        <div>
+        <div className="search-results">
             {filterResults.map((recipe) => {
                 return(
                     <Recipe recipe={recipe} />

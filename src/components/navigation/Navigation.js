@@ -24,7 +24,7 @@ export default function Navigation( {setSearch, search} ) {
                     <Nav.Link href="/about">About</Nav.Link>
                     <form onSubmit={(e) => {
                         e.preventDefault();
-                        history.push(`/${search}`)
+                        history.push(`/search/${search}`)
                     }} action="">
                         <input onChange={(e)=> {setSearch(e.target.value)}} placeholder='Search via keyword'type="text" />
                     </form>
