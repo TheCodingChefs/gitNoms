@@ -1,3 +1,21 @@
 body {
     padding-top: 100px;
 }
+.gitNoms, .theCodingChefs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px;
+    margin: 60px;
+}
+.teamMembers {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.steven, .woosik, .collen, .anselem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
