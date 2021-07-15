@@ -36,7 +36,7 @@ export default function Add() {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="add-form">
             <div className="addContainer">
                 <label htmlFor="title">Title</label>
                 <input type="text" required id="title" value={values.title} onChange={handleChange}/>
