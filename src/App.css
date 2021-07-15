@@ -22,7 +22,7 @@ body {
 .recipe-container {
     display: flex;
     flex-direction: row;
-
+}
 /* component Add */
 
 .addContainer, .submit {
