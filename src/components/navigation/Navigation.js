@@ -1,5 +1,5 @@
 import { Nav, Navbar, Container } from "react-bootstrap";
-import logo from '../../assets/logolight.png'
+import logo from '../../assets/logodark.png'
 import { useState } from 'react';
 import { useHistory } from "react-router";
 
@@ -12,7 +12,7 @@ export default function Navigation( {setSearch} ) {
     // const [search, setSearch] = useState('');
 
     return (
-        <Navbar bg="light">
+        <Navbar bg="dark" variant="dark" fixed="top">
             <Container>
                 <Navbar.Brand href="#home">
                     <img src={logo} width="50%" alt="logo"/>
