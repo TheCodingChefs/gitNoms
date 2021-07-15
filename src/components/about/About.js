@@ -1,6 +1,6 @@
 import logo from '../../assets/logo.png'
 import stevenProfile from '../../assets/stevenProfile.jpg'
-import woosikProfile from '../../assets/woosikProfile'
+import woosikProfile from '../../assets/woosikProfile.jpg'
 import collenProfile from '../../assets/collenProfile.jpg'
 import anselemProfile from '../../assets/anselemProfile.png'
 
