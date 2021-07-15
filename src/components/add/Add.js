@@ -37,14 +37,15 @@ export default function Add() {
 
     return (
         <form onSubmit={handleSubmit}>
-            <div>
+            <div className="addContainer">
                 <label htmlFor="title">Title</label>
                 <input type="text" required id="title" value={values.title} onChange={handleChange}/>
             </div>
-            <div>
+            <div className="addContainer">
                 <label htmlFor="cuisineType">Cuisine Type</label>
                 <input type="text" required id="cuisineType" value={values.cuisineType} onChange={handleChange}/>
             </div>
+            <div className="addContainer">
             <div className="formatting-directions">
                 <p>Format Ingredients and Directions with an Asterisk between each item/step.</p>  
             </div>
@@ -53,6 +54,14 @@ export default function Add() {
                 <input type="text" required id="ingredients" value={values.ingredients} onChange={handleChange}/>
                 <p>Example: Ingredient One*Ingredient Two*Ingredient Three*etc...</p>
             </div>
+            <div className="addContainer">
+                <label htmlFor="directions">Directions</label >
+                <input type="text"  required id="directions" value={values.directions} onChange={handleChange} />
+                <p>Format Directions with an Asterisk between each step.</p>
+                <p >Example: Direction number one*Direction number two*Direction number three*etc...</p>
+            </div>
+            <div className="submit">
+
             <div>
                 <label htmlFor="directions">Directions</label>
                 <input type="text" required id="directions" value={values.directions} onChange={handleChange}/>
@@ -62,7 +71,9 @@ export default function Add() {
                 <label htmlFor="author">Author</label>
                 <input type="text" id="author" value={values.author} onChange={handleChange}/>
             </div>
+
             <input type='submit' value='Add Recipe' />
+            </div>
         </form>
     )
 }
