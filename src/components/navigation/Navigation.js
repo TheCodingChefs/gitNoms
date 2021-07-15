@@ -18,9 +18,9 @@ export default function Navigation( {setSearch} ) {
                     <img src={logo} width="50%" alt="logo"/>
                 </Navbar.Brand>
                 <Nav className="navigation-bar">
-                    <Nav.Link href="#home">Home</Nav.Link>
+                    <Nav.Link href="/">Home</Nav.Link>
                     <Nav.Link href="#search">Advanced Search</Nav.Link>
-                    <Nav.Link href="#add">Add</Nav.Link>
+                    <Nav.Link href="/add">Add</Nav.Link>
                     <Nav.Link href="/about">About</Nav.Link>
                     <form onSubmit={(e) => {
                         e.preventDefault();

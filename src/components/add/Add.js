@@ -51,7 +51,7 @@ export default function Add() {
             <div>
                 <label htmlFor="directions">Directions</label>
                 <input type="text" required id="directions" value={values.directions} onChange={handleChange}/>
-                <p>Format Directions with an Asterisk between each step.</p><br></br>
+                <p>Format Directions with an Asterisk between each step.</p>
                 <p>Example: Direction number one*Direction number two*Direction number three*etc...</p>
             </div>
             <input type='submit' value='Add Recipe' />
