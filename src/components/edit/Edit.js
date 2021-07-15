@@ -3,9 +3,9 @@ import { useHistory } from 'react-router-dom';
 import RecipeForm from './RecipeForm';
 
 
-const EditForm = ({match, getRecipeData}) => {
+const Edit = ({ id, setShowEdit, getRecipes }) => {
   const history = useHistory();
-  const API_ENDPOINT = `http://localhost:4000/recipes/${match.params.id}`
+  const API_ENDPOINT = `http://localhost:4000/recipes/${id}`
   const [ values, setValues ] =
   useState ({
     title: '',
@@ -17,8 +17,8 @@ const EditForm = ({match, getRecipeData}) => {
   const getRecipe = async () => {
     try {
       const recipe = await fetch(API_ENDPOINT);
-      const data = await recipes.json();
-      setValues({title: data.title, ingredients: data.ingredients, directions: data.directions, cuisineType: data.cuisineType});
+      const data = await recipe.json();
+      setValues({title: data.title, ingredients: data.ingredients, directions: data.directions, cuisineType: data.cuisineType, author: data.author});
     } catch (err) {
       console.log(err);
     }
@@ -30,16 +30,18 @@ const EditForm = ({match, getRecipeData}) => {
 
   const updateRecipe = async (e, values) => {
     e.preventDefault();
+    setShowEdit(false);
     try {
       const response = await fetch(API_ENDPOINT, {
-        method: 'PUT',
+        method: 'PATCH',
         body: JSON.stringify(values),
         headers: {
           'Content-Type': 'application/json',
         }
       });
-      if (response.status === 2000 ) {
-        history.push(`/${match.params.id}`);
+      if (response.status === 200 ) {
+        // history.push(`/`);
+        getRecipes();
       } else {
                 alert('Something went wrong. Please try again');
       }
@@ -50,6 +52,7 @@ const EditForm = ({match, getRecipeData}) => {
 
   return (
     <RecipeForm
+    setShowEdit={setShowEdit}
     handleSubmit={updateRecipe}
     values={values}
     setValues={setValues}
@@ -63,4 +66,4 @@ const EditForm = ({match, getRecipeData}) => {
 
 
 
-export default EditForm;
+export default Edit;

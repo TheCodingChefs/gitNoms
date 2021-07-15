@@ -21,13 +21,18 @@ const RecipeForm = ({handleSubmit, values, setValues, type }) => {
       </div>
 
       <div className='edit-directions'>
-        <label htmlFor='directions'>Title</label>
+        <label htmlFor='directions'>Directions</label>
         <input type='text' id='directions' value={values.directions} onChange={handleChange} placeholder='Directions' required />
       </div>
 
       <div className='edit-cuisineType'>
-        <label htmlFor='cuisineType'>Title</label>
+        <label htmlFor='cuisineType'>Cuisine</label>
         <input type='text' id='cuisineType' value={values.cuisineType} onChange={handleChange} placeholder='Cuisine Type' required />
+      </div>
+
+      <div className='edit-author'>
+        <label htmlFor='author'>Author</label>
+        <input type='text' id='author' value={values.author} onChange={handleChange} placeholder='Author' required />
       </div>
 
 

@@ -2,27 +2,56 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Modal from 'react-bootstrap/Modal';
 
+import Edit from '../../edit/Edit';
  
 import { useState } from 'react';
 
-const Recipe = ({recipe}) => {
+const Recipe = ({recipe, getRecipes}) => {
 
+
+    // STATE VARIABLES
     const [show, setShow] = useState(false);
+    const [showEdit, setShowEdit] = useState(false);
 
+
+    // SHOW/ HIDE MODALS
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+    const handleShowEdit = () => {
+        setShowEdit(true);
+        setShow(false);
+    }
+    const handleCloseEdit = () => setShowEdit(false);
 
-    const [currentId, setCurrentId] = useState('');
 
+    // SPLITS THE STRINGS AT '*'
     const directions = recipe.directions.split('*');
     const ingredients = recipe.ingredients.split('*');
+
+    // DELETE RECIPE
+    const handleDelete = async () => {
+        if (window.confirm('Are you sure you want to delete?')) {
+            try {
+                const deletedRecipe = await fetch(`http://localhost:4000/recipes/${recipe._id}`, {method: 'DELETE'})
+                if (deletedRecipe.status === 204) {
+                    getRecipes();
+                    // history.push('/')
+                } else {
+                    alert('Oops something went wrong')
+                }
+            }
+            catch (err) {
+                console.log(err);
+            }
+        }
+    }
+
 
     return (
 
         <>
-        {/* <Button variant="primary" onClick={handleShow}>
-        Launch demo modal
-      </Button> */}
+
+        {/* RECIPE MODAL */}
 
         <Modal show={show} onHide={handleClose}>
             <Modal.Header closeButton>
@@ -45,16 +74,29 @@ const Recipe = ({recipe}) => {
                     })}
                 </ol></Modal.Body>
             <Modal.Footer>
-            <Button variant="danger" onClick={handleClose}>
+            <Button variant="outline-danger" onClick={handleDelete}>
                 Delete
             </Button>
-            <Button variant="secondary" onClick={handleClose}>
+            <Button variant="secondary" onClick={handleShowEdit}>
                 Edit
             </Button>
             </Modal.Footer>
         </Modal>
 
+        {/* EDIT MODAL */}
 
+        <Modal show={showEdit} onHide={handleCloseEdit}>
+            <Modal.Header closeButton>
+            <Modal.Title>{recipe.title}</Modal.Title>
+            </Modal.Header>
+                    <Edit getRecipes={getRecipes} setShowEdit={setShowEdit} id={recipe._id}></Edit>
+            
+            <Modal.Footer>
+          
+            </Modal.Footer>
+        </Modal>
+
+        {/* RECIPE CARD */}
 
         <Card
             onClick={handleShow}
