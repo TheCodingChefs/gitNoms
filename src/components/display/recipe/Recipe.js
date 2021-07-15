@@ -5,32 +5,32 @@ import Card from 'react-bootstrap/Card';
 const recipe = ({recipe}) => {
 
     const directions = recipe.directions.split('*');
+    const ingredients = recipe.directions.split('*');
 
     return (
         <Card style={{ width: '18rem' }}>
         <Card.Body>
             <Card.Title>{recipe.title}</Card.Title>
+            <Card.Subtitle className='author'>By: {recipe.author}</Card.Subtitle>
             <Card.Subtitle className="mb-2 text-muted">{recipe.cuisineType}</Card.Subtitle>
             <Card.Text>
                 <p>Ingredients:</p>
                 <ul>
-                   {recipe.ingredients.map((ingredient) => {
+                   {ingredients.map((ingredient) => {
                        return(
                            <li className="ingredient">{ingredient}</li>
                        )
                    })} 
                 </ul>
                 <p>Directions:</p>
-                <ul>
+                <ol>
                     {directions.map((direction) => {
                         return(
                             <li className="direction">{direction.charAt(0).toUpperCase() + direction.slice(1)}</li>
                         )
                     })}
-                </ul>
-            </Card.Text>
-            <Card.Link href="#">Card Link</Card.Link>
-            <Card.Link href="#">Another Link</Card.Link>
+                </ol>
+            </Card.Text>           
         </Card.Body>
         </Card>
     );
