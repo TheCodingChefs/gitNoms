@@ -55,7 +55,7 @@ const Recipe = ({recipe, getRecipes}) => {
 
         {/* RECIPE MODAL */}
 
-        <Modal show={show} onHide={handleClose}>
+        <Modal show={show} onHide={handleClose} size="lg">
             <Modal.Header closeButton>
             <Modal.Title>{recipe.title}</Modal.Title>
             </Modal.Header>
@@ -87,7 +87,7 @@ const Recipe = ({recipe, getRecipes}) => {
 
         {/* EDIT MODAL */}
 
-        <Modal show={showEdit} onHide={handleCloseEdit}>
+        <Modal show={showEdit} onHide={handleCloseEdit} size="lg">
             <Modal.Header closeButton>
             <Modal.Title>{recipe.title}</Modal.Title>
             </Modal.Header>
