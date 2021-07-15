@@ -1,10 +1,10 @@
-import logo from '../../assets/logo.png'
+import chef from '../../assets/chef.png'
 import stevenProfile from '../../assets/stevenProfile.jpg'
 import woosikProfile from '../../assets/woosikProfile.jpg'
 import collenProfile from '../../assets/collenProfile.jpg'
 import anselemProfile from '../../assets/anselemProfile.png'
 
-function About () {
+function About() {
     return (
         <div className='about'>
             <div className='gitNoms'>
@@ -15,33 +15,37 @@ function About () {
                 </p>
             </div>
             <div className='theCodingChefs'>
-                <img src={logo} alt="the coding chefs logo" width="150px" height="150px"/>
+                <img src={chef} alt='the coding chefs logo' width='300px' height='300px' />
                 <h2>Introducing the Coding Chefs Team!</h2>
-                    <div className="teamMembers">
-                        <div>
-                            <img src={stevenProfile} alt="steven profile picture" width="100px" height="100px"/>
-                            <h3>Steven Semco</h3>
-                            <h4>Colorado Springs, CO</h4>
-                        </div>
-                        <div>
-                            <img src={woosikProfile} alt="woo-sik profile picture" width="100px" height="100px"/>
-                            <h3>Woo-Sik Choi</h3>
-                            <h4>Austin, TX</h4>
-                        </div>
-                        <div>
-                            <img src={collenProfile} alt="collen profile picture" width="100px" height="100px"/>
-                            <h3>Collen Whitney</h3>
-                            <h4>Harrisonburg, VA</h4>
-                        </div>
-                        <div>
-                            <img src={anselemProfile} alt="anselem profile picture" width="100px" height="100px"/>
-                            <h3>Anselem Ogbennia</h3>
-                            <h4>Los Angeles, CA</h4>
-                        </div>
+                <div className='teamMembers'>
+                    <div className='steven'>
+                        <img src={stevenProfile} alt='steven profile picture' width='150px' height='150px' />
+                        <h3>Steven Semco</h3>
+                        <h5>Colorado Springs, CO</h5>
+                        <h5>MT</h5>
+                    </div>
+                    <div className='woosik'>
+                        <img src={woosikProfile} alt='woo-sik profile picture' width='150px' height='150px' />
+                        <h3>Woo-Sik Choi</h3>
+                        <h5>Austin, TX</h5>
+                        <h5>CT</h5>
+                    </div>
+                    <div className='collen'>
+                        <img src={collenProfile} alt='collen profile picture' width='150px' height='150px' />
+                        <h3>Collen Whitney</h3>
+                        <h5>Harrisonburg, VA</h5>
+                        <h5>ET</h5>
+                    </div>
+                    <div className='anselem'>
+                        <img src={anselemProfile} alt='anselem profile picture' width='150px' height='150px' />
+                        <h3>Anselem Ogbennia</h3>
+                        <h5>Los Angeles, CA</h5>
+                        <h5>PT</h5>
+                    </div>
                 </div>
             </div>
         </div>
-        
+
     );
 }
 
