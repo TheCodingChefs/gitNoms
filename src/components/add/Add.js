@@ -1,5 +1,7 @@
 import { useState } from "react"
 
+import { useHistory } from "react-router"
+
 
 export default function Add() {
     const initialFormState = {
@@ -9,6 +11,8 @@ export default function Add() {
         directions: '',
         author: ''
     }
+
+    const history = useHistory();
 
     const [values, setValues] = useState(initialFormState)
 
@@ -27,6 +31,7 @@ export default function Add() {
                 }
             })
             if (response.status === 201) {
+                history.push('/');
                 setValues(initialFormState)
                 //GET RECPIES?//
             }
