@@ -48,3 +48,7 @@ body {
 .card {
     border: 2px solid black;
 }
+
+.add-form {
+    margin-top: 100px;
+}
