@@ -17,12 +17,12 @@ const RecipeForm = ({handleSubmit, values, setValues, type }) => {
 
       <div className='edit-ingredients'>
         <label htmlFor='ingredients'>Ingredients</label><br></br>
-        <textarea id='ingredients' value={values.ingredients} onChange={handleChange} placeholder='Ingredients' required rows="5" cols="50" />
+        <textarea id='ingredients' value={values.ingredients} onChange={handleChange} placeholder='Ingredients' required rows="5" cols="100" />
       </div>
 
       <div className='edit-directions'>
         <label htmlFor='directions'>Directions</label><br></br>
-        <textarea id='directions' value={values.directions} onChange={handleChange} placeholder='Directions' required rows="5" cols="50" />
+        <textarea id='directions' value={values.directions} onChange={handleChange} placeholder='Directions' required rows="5" cols="100" />
       </div>
 
       <div className='edit-cuisineType'>
