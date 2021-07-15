@@ -101,7 +101,8 @@ const Recipe = ({recipe, getRecipes}) => {
         <Card
             onClick={handleShow}
             id={recipe._id}
-            style={{ width: '18rem' }}>
+            style={{ width: '18rem' }}
+            border="dark">
         <Card.Body>
             <Card.Title>{recipe.title}</Card.Title>
             <Card.Subtitle className='author'>By: {recipe.author}</Card.Subtitle>

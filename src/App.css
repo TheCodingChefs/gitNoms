@@ -1,5 +1,5 @@
 body {
-    padding-top: 100px;
+    background-color: rgb(141, 141, 141);
 }
 .gitNoms, .theCodingChefs {
     display: flex;
@@ -25,8 +25,12 @@ body {
     grid-auto-rows: minmax(250px, auto);
     grid-gap: 1rem;
     margin: 0 auto;
+    margin-top: 100px;
     max-width: 1200px;
     padding: 1rem;
+}
+.App {
+    background-color: rgb(141, 141, 141);
 }
 /* component Add */
 
@@ -39,4 +43,8 @@ body {
 
 .submit {
     margin: 1rem auto;
+}
+
+.card {
+    border: 2px solid black;
 }
