@@ -1,27 +1,20 @@
-import React, { useState } from "react";
-import '../../About.css';
-
 import chef from '../../assets/chef.png'
 import stevenProfile from '../../assets/stevenProfile.jpg'
 import woosikProfile from '../../assets/woosikProfile.jpg'
 import collenProfile from '../../assets/collenProfile.jpg'
 import anselemProfile from '../../assets/anselemProfile.png'
 
-function About() {
+function About({darkMode}) {
+    
     const today = new Date();
     const utcHr = today.getUTCHours();
     const utcMin = today.getUTCMinutes();
-    
-    const [darkMode, setDarkMode] = useState(false);
-    const toggleDarkMode = () => setDarkMode(darkMode ? false : true);
-    
+        
     return (
         <div className='about' theme={darkMode ? "dark" : "light"}>
             <div className='gitNoms'>
                 <h2>gitNoms</h2>
-                <button onClick={toggleDarkMode}>
-                {darkMode ? "Light Mode" : "Dark Mode"}
-                </button>
+
                 <p className="about-text">Living in this pandemic world, more and more people are becoming the home cook. The gitNoms is an online recipe application. Users can easily upload, edit, or delete their own receipes. The gitNoms is built by the Coding Chefs from 4 different time zones!
 
                 </p>
