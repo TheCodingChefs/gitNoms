@@ -31,7 +31,7 @@ function App() {
         <Route path={`/about`} exact render={() => 
           <About darkMode={darkMode} /> }/>
         <Route path='/' exact component= {Display} />
-        <Route path='/add' component={Form}/>
+        <Route path={'/add'} exact render={() => <Form darkMode={darkMode}/>} />
         <Route path='/advanced' exact render={() =>
           <AdvancedSearch setAllergenFilter={setAllergenFilter}/> } />
 
