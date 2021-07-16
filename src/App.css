@@ -1,27 +1,33 @@
 body {
     background-color: rgb(141, 141, 141);
 }
+
 .gitNoms, .theCodingChefs {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
+
 .gitNoms {
-    padding: 30px;
-    margin: 100px 60px;
+    padding-top: 100px;
+
 }
+
 .theCodingChefs {
     padding: 30px;
     margin: 60px
 }
+
 .theCodingChefs h2, .gitNoms h2 {
     padding: 50px;
 }
+
 .teamMembers {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
+
 .steven, .woosik, .collen, .anselem {
     display: flex;
     justify-content: center;
@@ -33,20 +39,20 @@ body {
     background-color: white;
     padding: 0 10px 0 10px;
 }
+
 .recipe-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     grid-auto-rows: minmax(250px, auto);
     grid-gap: 1rem;
     margin: 0 auto;
-    margin-top: 96px;
     max-width: 1200px;
-    padding: 1rem;
+    padding-top: 110px;
 }
+
 .App {
     background-color: rgb(141, 141, 141);
 }
-/* component Add */
 
 .addContainer, .submit {
     display: flex;
@@ -64,7 +70,7 @@ body {
 }
 
 .add-form {
-    margin-top: 100px;
+    padding-top: 100px;
 }
 
 .about-text {
@@ -103,6 +109,13 @@ body {
     flex-direction: column;
     text-align: left;
     margin-left: 30px;
+}
+
+.navbar {
+    padding: 0;
+    background: rgba(0, 0, 0, .1);
+    border: none;
+    box-shadow: none;
 }
 
 .confirm-edit {
