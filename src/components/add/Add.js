@@ -55,12 +55,12 @@ export default function Add() {
             </div>
             <div className="addContainer">
                 <label htmlFor="ingredients">Ingredients</label>
-                <input type="text" required id="ingredients" value={values.ingredients} onChange={handleChange}/>
+                <textarea id='ingredients' value={values.ingredients} onChange={handleChange} placeholder='Ingredients' required rows="5" cols="50" />
                 <p>Example: Ingredient One*Ingredient Two*Ingredient Three*etc...</p>
             </div>
             <div className="addContainer">
                 <label htmlFor="directions">Directions</label>
-                <input type="text" required id="directions" value={values.directions} onChange={handleChange}/>
+                <textarea id='directions' value={values.directions} onChange={handleChange} placeholder='Directions' required rows="5" cols="50" />
                 <p>Example: Direction number one*Direction number two*Direction number three*etc...</p>
             </div>
             <div className="addContainer">
