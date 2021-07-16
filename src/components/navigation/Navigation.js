@@ -19,7 +19,7 @@ export default function Navigation( {setSearch, search, toggleDarkMode} ) {
                 </Navbar.Brand>
                 <Nav className="navigation-bar">
                     <Nav.Link href="/">Home</Nav.Link>
-                    <Nav.Link href="#search">Advanced Search</Nav.Link>
+                    <Nav.Link href="/advanced">Advanced Search</Nav.Link>
                     <Nav.Link href="/add">Add</Nav.Link>
                     <Nav.Link href="/about">About</Nav.Link>
                     <form onSubmit={(e) => {
