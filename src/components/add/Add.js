@@ -4,7 +4,7 @@ import { isElement } from "react-dom/cjs/react-dom-test-utils.production.min";
 import { useHistory } from "react-router"
 
 
-export default function Add() {
+export default function Add({darkMode}) {
 
     const API_URL = 'https://git-noms-api.herokuapp.com/recipes';
 
@@ -61,7 +61,7 @@ export default function Add() {
     }
 
     return (
-        <form onSubmit={handleSubmit} className="add-form">
+        <form onSubmit={handleSubmit} className="add-form" theme={darkMode ? "dark" : "light"}>
             <div className="addContainer">
                 <label htmlFor="title">Title</label>
                 <input type="text" required id="title" value={values.title} onChange={handleChange}/>
