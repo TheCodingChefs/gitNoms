@@ -22,7 +22,6 @@ function App() {
   return (
     <div className="App">
 
-<<<<<<< HEAD
         <Navigation setSearch={setSearch} search={search} toggleDarkMode={toggleDarkMode} />
         {/* <Display /> */}
 
@@ -33,17 +32,6 @@ function App() {
         <About darkMode={darkMode} /> }/>
         <Route path='/' exact component= {Display} />
         <Route path='/add' component={Form}/>
-=======
-
-        <Navigation setSearch={setSearch} search ={search} />
-
-        <main>
-          <Route path={`/search/${search}`} exact render={() => <Search search={search} /> }/>
-          <Route path='/' exact component= {Display} />
-          <Route path='/about' exact component= {About} />
-          <Route path='/add' component={Form}/>
-        </main>
->>>>>>> 49110d7 (Add real API URL)
 
     </div>
   );
