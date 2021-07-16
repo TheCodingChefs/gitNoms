@@ -1,3 +1,6 @@
+import React, { useState } from "react";
+import '../../About.css';
+
 import chef from '../../assets/chef.png'
 import stevenProfile from '../../assets/stevenProfile.jpg'
 import woosikProfile from '../../assets/woosikProfile.jpg'
@@ -8,9 +11,11 @@ function About() {
     const today = new Date();
     const utcHr = today.getUTCHours();
     const utcMin = today.getUTCMinutes();
-
+    
+    const [darkMode, setDarkMode] = useState(false);
+    
     return (
-        <div className='about'>
+        <div className='about' data-theme={darkMode ? "dark" : "light"}>
             <div className='gitNoms'>
                 <h2>gitNoms</h2>
 
