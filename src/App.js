@@ -15,6 +15,7 @@ import Form from './components/add/Add';
 function App() {
 
   const [search, setSearch] = useState('');
+  const [allergenFilter, setAllergenFilter] = useState([]);
 
   // Dark mode
   const [darkMode, setDarkMode] = useState(false);
@@ -24,24 +25,15 @@ function App() {
     <div className="App">
 
         <Navigation setSearch={setSearch} search={search} toggleDarkMode={toggleDarkMode} />
-        {/* <Display /> */}
 
         <Route path={`/search/${search}`} exact render={() => 
-        <Search search={search} /> }/>
+          <Search search={search} /> }/>
         <Route path={`/about`} exact render={() => 
-        <About darkMode={darkMode} /> }/>
+          <About darkMode={darkMode} /> }/>
         <Route path='/' exact component= {Display} />
         <Route path='/add' component={Form}/>
-
-        <Navigation setSearch={setSearch} search ={search} />
-
-        {/* <main> */}
-          {/* <Route path={`/search/${search}`} exact render={() => <Search search={search} /> }/>
-          <Route path='/' exact component= {Display} />
-          <Route path='/about' exact component= {About} />
-          <Route path='/add' component={Form}/> */}
-          <Route path='/advanced' component={AdvancedSearch}/>
-        {/* </main> */}
+        <Route path='/advanced' exact render={() =>
+          <AdvancedSearch setAllergenFilter={setAllergenFilter}/> } />
 
     </div>
   );

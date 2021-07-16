@@ -7,20 +7,30 @@ const AdvancedSearch = () => {
 
     const [allergens, setAllergens] = useState([]);
 
-    const allergens = ['Milk', 'Egg', 'Fish', 'Shellfish', 'Tree nuts', 'Wheat', 'Peanuts', 'Soybeans'];
+    const allergensArr = ['Milk', 'Egg', 'Fish', 'Shellfish', 'Tree nuts', 'Wheat', 'Peanuts', 'Soybeans'];
 
-    handleToggle = (allergen) => {
+    const handleToggle = (allergen) => {
 
+        console.log(allergen);
+        if(!allergens.includes(allergen)) {
+            setAllergens([...allergens, allergen])
+        } else {
+            allergens.splice(allergens.indexOf(allergen), 1);
+        }
 
+        console.log(allergens);
 
-    } 
+    }
     
+    const handleClick = () => {
+        console.log(allergens);
+    }
     
-
     return (
         <div className='advanced-search'>
             <form action="">
-                {allergens.map((allergen) => {
+            <div className='allergen-buttons'>
+                {allergensArr.map((allergen) => {
                     return(
                         <div>
                             <label htmlFor={allergen}>{allergen}</label>
@@ -28,8 +38,9 @@ const AdvancedSearch = () => {
                         </div>
                     )
                 })}
+                </div>
+                <Button onClick ={handleClick}className='advanced-search-btn' variant='outline-primary'>Search</Button>
             </form>
-                <Button className='advanced-search-btn' variant='outline-primary'>Search</Button>
         </div>
             
     );
