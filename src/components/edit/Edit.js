@@ -5,7 +5,7 @@ import RecipeForm from './RecipeForm';
 
 const Edit = ({ id, setShowEdit, getRecipes }) => {
   const history = useHistory();
-  const API_ENDPOINT = `http://localhost:4000/recipes/${id}`
+  const API_URL = `https://git-noms-api.herokuapp.com/recipes`
   const [ values, setValues ] =
   useState ({
     title: '',
@@ -16,7 +16,7 @@ const Edit = ({ id, setShowEdit, getRecipes }) => {
 
   const getRecipe = async () => {
     try {
-      const recipe = await fetch(API_ENDPOINT);
+      const recipe = await fetch(API_URL);
       const data = await recipe.json();
       setValues({title: data.title, ingredients: data.ingredients, directions: data.directions, cuisineType: data.cuisineType, author: data.author});
     } catch (err) {
@@ -32,7 +32,7 @@ const Edit = ({ id, setShowEdit, getRecipes }) => {
     e.preventDefault();
     setShowEdit(false);
     try {
-      const response = await fetch(API_ENDPOINT, {
+      const response = await fetch(`${API_URL}/${id}`, {
         method: 'PATCH',
         body: JSON.stringify(values),
         headers: {

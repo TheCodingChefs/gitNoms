@@ -4,6 +4,9 @@ import { useHistory } from "react-router"
 
 
 export default function Add() {
+
+    const API_URL = 'https://git-noms-api.herokuapp.com/recipes';
+
     const initialFormState = {
         title: '',
         cuisineType: '',
@@ -23,7 +26,7 @@ export default function Add() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch('http://localhost:4000/recipes', {
+            const response = await fetch(`${API_URL}`, {
                 method: "POST",
                 body: JSON.stringify(values),
                 headers: {
