@@ -1,4 +1,5 @@
 import './App.css';
+import './Dark.css';
 
 import Navigation from './components/navigation/Navigation';
 import Display from './components/display/Display';
@@ -14,9 +15,23 @@ function App() {
 
   const [search, setSearch] = useState('');
 
+  // Dark mode
+  const [darkMode, setDarkMode] = useState(false);
+  const toggleDarkMode = () => setDarkMode(darkMode ? false : true);   
+
   return (
     <div className="App">
 
+        <Navigation setSearch={setSearch} search={search} toggleDarkMode={toggleDarkMode} />
+        {/* <Display /> */}
+
+        <Route path={`/search/${search}`} exact render={() => 
+        <Search search={search} /> }/>
+        {/* <Route path='/about' exact component= {About} /> */}
+        <Route path={`/about`} exact render={() => 
+        <About darkMode={darkMode} /> }/>
+        <Route path='/' exact component= {Display} />
+        <Route path='/add' component={Form}/>
 
         <Navigation setSearch={setSearch} search ={search} />
 
