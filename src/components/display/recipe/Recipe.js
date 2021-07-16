@@ -78,7 +78,7 @@ const Recipe = ({recipe, getRecipes}) => {
                     })}
                 </ol></Modal.Body>
             <Modal.Footer>
-            <Card.Img variant="bottom" src={thumbsup} alt="thumbs up" style={{ width: '30px' }} className="rating-left"/>
+            <Card.Img onClick={console.log("click")} variant="bottom" src={thumbsup} alt="thumbs up" style={{ width: '30px' }} className="rating-left"/>
             <Card.Img variant="bottom" src={thumbsdown} alt="thumbs down"  style={{ width: '30px' }} className="rating-right"/>
             <Button variant="outline-danger" onClick={handleDelete}>
                 Delete
