@@ -13,12 +13,15 @@ function About() {
     const utcMin = today.getUTCMinutes();
     
     const [darkMode, setDarkMode] = useState(false);
+    const toggleDarkMode = () => setDarkMode(darkMode ? false : true);
     
     return (
-        <div className='about' data-theme={darkMode ? "dark" : "light"}>
+        <div className='about' theme={darkMode ? "dark" : "light"}>
             <div className='gitNoms'>
                 <h2>gitNoms</h2>
-
+                <button onClick={toggleDarkMode}>
+                {darkMode ? "Light Mode" : "Dark Mode"}
+                </button>
                 <p className="about-text">Living in this pandemic world, more and more people are becoming the home cook. The gitNoms is an online recipe application. Users can easily upload, edit, or delete their own receipes. The gitNoms is built by the Coding Chefs from 4 different time zones!
 
                 </p>
