@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import Recipe from "./recipe/Recipe";
 
 const Display = () => {
-    const API_URL = process.env.API_URL || 'http://localhost:4000/recipes';
+    const API_URL = 'https://git-noms-api.herokuapp.com/recipes';
     const [recipeData, setRecipeData] = useState([]);
 
     const getRecipes = async () => {
