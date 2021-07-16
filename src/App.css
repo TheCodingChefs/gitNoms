@@ -71,6 +71,8 @@ body {
 
 .add-form {
     padding-top: 100px;
+    font-size: 19px;
+    font-weight: 600;
 }
 
 .about-text {
@@ -86,11 +88,17 @@ body {
 }
 
 .rating-left {
-    margin: 5px 30px 5px 30px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 10px;
 }
 
 .rating-right {
-    margin: 5px 30px 5px 30px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 10px;
 }
 
 .search-results {
@@ -121,4 +129,12 @@ body {
 .confirm-edit {
     max-width: 150px;
     margin: 10px auto;
+}
+
+.author {
+    padding-bottom: 15px;
+}
+
+.addContainer {
+    margin-bottom: 10px;
 }

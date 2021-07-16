@@ -9,14 +9,14 @@ const Edit = ({ id, setShowEdit, getRecipes }) => {
   const [ values, setValues ] =
   useState ({
     title: '',
-    ingredients: [],
+    ingredients: '',
     directions: '',
     cuisineType: '',
   });
 
   const getRecipe = async () => {
     try {
-      const recipe = await fetch(API_URL);
+      const recipe = await fetch(`${API_URL}/${id}`);
       const data = await recipe.json();
       setValues({title: data.title, ingredients: data.ingredients, directions: data.directions, cuisineType: data.cuisineType, author: data.author});
     } catch (err) {
