@@ -16,9 +16,6 @@ const Search = ({search}) => {
             const res = await fetch (API_URL);
             const data = await res.json();
             setResults(data);
-            console.log(data[0].title);
-            console.log(data[0].title.contains('Shrimp'));
-
             
         }
         catch (err) {
