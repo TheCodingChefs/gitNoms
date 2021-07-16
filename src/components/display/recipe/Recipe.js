@@ -11,6 +11,8 @@ import { useState } from 'react';
 const Recipe = ({recipe, getRecipes}) => {
 
 
+    const API_URL = 'https://git-noms-api.herokuapp.com/recipes';
+
     // STATE VARIABLES
     const [show, setShow] = useState(false);
     const [showEdit, setShowEdit] = useState(false);
@@ -34,7 +36,7 @@ const Recipe = ({recipe, getRecipes}) => {
     const handleDelete = async () => {
         if (window.confirm('Are you sure you want to delete?')) {
             try {
-                const deletedRecipe = await fetch(`http://localhost:4000/recipes/${recipe._id}`, {method: 'DELETE'})
+                const deletedRecipe = await fetch(`${API_URL}/${recipe._id}`, {method: 'DELETE'})
                 if (deletedRecipe.status === 204) {
                     getRecipes();
                     // history.push('/')
@@ -79,7 +81,7 @@ const Recipe = ({recipe, getRecipes}) => {
             <Button variant="outline-danger" onClick={handleDelete}>
                 Delete
             </Button>
-            <Button variant="secondary" onClick={handleShowEdit}>
+            <Button variant="outline-secondary" onClick={handleShowEdit}>
                 Edit
             </Button>
             </Modal.Footer>

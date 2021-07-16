@@ -1,3 +1,6 @@
+import Button from 'react-bootstrap/Button';
+
+
 const RecipeForm = ({handleSubmit, values, setValues, type }) => {
   const handleChange = (e) => {
     setValues((prevState) => {
@@ -35,8 +38,8 @@ const RecipeForm = ({handleSubmit, values, setValues, type }) => {
         <input type='text' id='author' value={values.author} onChange={handleChange} placeholder='Author' required />
       </div>
 
-
-      <input type='submit' value={`${type} recipe`} className='submit' />
+      <Button className='confirm-edit' type='submit'variant="outline-secondary">Update recipe </Button>
+      {/* <input type='submit' value={`${type} recipe`} className='submit' /> */}
     </form>
   )
 }
