@@ -39,7 +39,7 @@ body {
     grid-auto-rows: minmax(250px, auto);
     grid-gap: 1rem;
     margin: 0 auto;
-    margin-top: 100px;
+    margin-top: 96px;
     max-width: 1200px;
     padding: 1rem;
 }
@@ -103,4 +103,9 @@ body {
     flex-direction: column;
     text-align: left;
     margin-left: 30px;
+}
+
+.confirm-edit {
+    max-width: 150px;
+    margin: 10px auto;
 }
