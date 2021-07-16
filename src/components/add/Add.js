@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { isElement } from "react-dom/cjs/react-dom-test-utils.production.min";
 
 import { useHistory } from "react-router"
 
@@ -12,7 +13,17 @@ export default function Add() {
         cuisineType: '',
         ingredients: '',
         directions: '',
-        author: ''
+        author: '',
+        allergens: {
+            milk: false,
+            egg: false,
+            fish: false,
+            shellfish: false,
+            treenuts: false,
+            wheat: false,
+            peanuts: false,
+            soybeans: false
+        }
     }
 
     const history = useHistory();
@@ -22,6 +33,12 @@ export default function Add() {
     function handleChange(event) {
         setValues({ ...values, [event.target.id]: event.target.value })
     }
+
+    // function handleCheck(event) {
+    //     let isChecked = event.target.checked;
+    //     let item = event.target.value
+    //     item.setValue(prevState => ({ item, isChecked }))
+    // }
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -66,6 +83,16 @@ export default function Add() {
                 <textarea id='directions' value={values.directions} onChange={handleChange} placeholder='Directions' required rows="5" cols="50" />
                 <p>Example: Direction number one*Direction number two*Direction number three*etc...</p>
             </div>
+            {/* <div className="checkboxes">
+                <input
+                    type="checkbox"
+                    id="milk"
+                    name="milk"
+                    value="false"
+                    checked="false"
+                    onChange={handleCheck}
+                    /> Milk
+            </div> */}
             <div className="addContainer">
                 <label htmlFor="author">Author</label>
                 <input type="text" id="author" value={values.author} onChange={handleChange}/>
