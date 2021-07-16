@@ -33,6 +33,15 @@ function App() {
         <Route path='/' exact component= {Display} />
         <Route path='/add' component={Form}/>
 
+        <Navigation setSearch={setSearch} search ={search} />
+
+        <main>
+          <Route path={`/search/${search}`} exact render={() => <Search search={search} /> }/>
+          <Route path='/' exact component= {Display} />
+          <Route path='/about' exact component= {About} />
+          <Route path='/add' component={Form}/>
+        </main>
+
     </div>
   );
 }
