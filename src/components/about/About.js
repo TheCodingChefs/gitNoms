@@ -4,7 +4,8 @@ import woosikProfile from '../../assets/woosikProfile.jpg'
 import collenProfile from '../../assets/collenProfile.jpg'
 import anselemProfile from '../../assets/anselemProfile.png'
 
-function About() {
+function About({darkMode}) {
+    
     const today = new Date();
     const utcHr = today.getUTCHours();
     const utcMin = today.getUTCMinutes();

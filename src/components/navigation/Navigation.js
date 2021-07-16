@@ -5,11 +5,8 @@ import { useHistory } from "react-router";
 
 import Search from "../search/Search";
 
-export default function Navigation( {setSearch, search} ) {
-    // Dark mode
-    const [darkMode, setDarkMode] = useState(false);
-    const toggleDarkMode = () => setDarkMode(darkMode ? false : true);
-
+export default function Navigation( {setSearch, search, toggleDarkMode} ) {
+    
     const history = useHistory();
 
     // const [search, setSearch] = useState('');
@@ -32,7 +29,7 @@ export default function Navigation( {setSearch, search} ) {
                         <input onChange={(e)=> {setSearch(e.target.value)}} placeholder='Search via keyword'type="text" />
                     </form>
                     <button onClick={toggleDarkMode}>
-                    {darkMode ? "Light Mode" : "Dark Mode"}
+                    {/* {darkMode ? "Light Mode" : "Dark Mode"} */}
                     </button>
                 </Nav>
             </Container>

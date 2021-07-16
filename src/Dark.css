@@ -1,0 +1,18 @@
+/* :root {
+    --bg-color: #fff;
+    --text-color: #000;
+  }
+   */
+  /* [theme="dark"] {
+    --bg-color: #3F3F3F;
+    --text-color: #fff;
+  } */
+  [theme="dark"] {
+    background-color: #3F3F3F;
+    color: #fff;
+  }
+
+  .about {
+    background-color: var(background-color);
+    color: var(color);
+  }
