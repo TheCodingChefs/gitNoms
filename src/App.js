@@ -28,7 +28,6 @@ function App() {
 
         <Route path={`/search/${search}`} exact render={() => 
         <Search search={search} /> }/>
-        {/* <Route path='/about' exact component= {About} /> */}
         <Route path={`/about`} exact render={() => 
         <About darkMode={darkMode} /> }/>
         <Route path='/' exact component= {Display} />
@@ -37,10 +36,10 @@ function App() {
         <Navigation setSearch={setSearch} search ={search} />
 
         {/* <main> */}
-          <Route path={`/search/${search}`} exact render={() => <Search search={search} /> }/>
+          {/* <Route path={`/search/${search}`} exact render={() => <Search search={search} /> }/>
           <Route path='/' exact component= {Display} />
           <Route path='/about' exact component= {About} />
-          <Route path='/add' component={Form}/>
+          <Route path='/add' component={Form}/> */}
           <Route path='/advanced' component={AdvancedSearch}/>
         {/* </main> */}
 
