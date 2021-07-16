@@ -11,6 +11,9 @@
     background-color: #3F3F3F;
     color: #fff;
   }
+  [theme="light"] {
+    background-color: burlywood;
+  }
 
   .about {
     background-color: var(background-color);
