@@ -4,7 +4,7 @@ import Recipe from '../display/recipe/Recipe';
 
 const Search = ({search}) => {
 
-    const API_URL = process.env.API_URL || 'http://localhost:4000/recipes';
+    const API_URL = 'https://git-noms-api.herokuapp.com/recipes';
 
     const [results, setResults] = useState([]);
     const [filterResults, setFilterResults] = useState([]);
