@@ -46,8 +46,6 @@ body {
     grid-auto-rows: minmax(250px, auto);
     grid-gap: 1rem;
     margin: 0 auto;
-
-    margin-top: 96px;
     max-width: 1200px;
     padding-top: 110px;
 }
