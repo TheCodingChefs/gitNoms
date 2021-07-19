@@ -39,3 +39,6 @@
   .card-body {
     background-color: var(--card-background-color);
   }
+  .card-subtitle {
+    color: var(--card-subtitle-color);
+  }
