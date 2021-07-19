@@ -37,5 +37,5 @@
     color: var(--color);
   }
   .card-body {
-    background-color: var(--background-color);
+    background-color: var(--card-background-color);
   }
