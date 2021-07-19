@@ -1,45 +1,45 @@
-/* :root {
-    --bg-color: #fff;
-    --text-color: #000;
-  }
-   */
-  /* [theme="dark"] {
-    --bg-color: #3F3F3F;
-    --text-color: #fff;
-  } */
-  [theme="dark"] {
-    --background-color: #3F3F3F;
-    --color: #fff;
-    --card-background-color: #8d8d8d;
-    --mb-2-color: black;
-  }
-  [theme="light"] {
-    --background-color: burlywood;
-    --card-background-color: white;
-  }
-
-  .about {
-    background-color: var(--background-color);
-    color: var(--color);
-  }
-  .steven, .woosik, .collen, .anselem {
-    background-color: var(--card-background-color);
+/* Attributes */
+[theme="dark"] {
+  --background-color: #3f3f3f;
+  --color: #fff;
+  --card-background-color: #8d8d8d;
+  --mb-2-color: black;
 }
-  .add-form {
-    background-color: var(--background-color);
-    color: var(--color);
-  }
-  .advanced-search {
-    background-color: var(--background-color);
-    color: var(--color);
-  }
-  .recipe-container {
-    background-color: var(--background-color);
-    color: var(--color);
-  }
-  .card-body {
-    background-color: var(--card-background-color);
-  }
-  .mb-2.text-muted.card-subtitle.h6 {
-    color: var(--mb-2-color);
-  }
+[theme="light"] {
+  --background-color: burlywood;
+  --card-background-color: white;
+  --mb-2-color: #6c757d;
+}
+
+.about {
+  background-color: var(--background-color);
+  color: var(--color);
+}
+.steven,
+.woosik,
+.collen,
+.anselem {
+  background-color: var(--card-background-color);
+}
+.add-form {
+  background-color: var(--background-color);
+  color: var(--color);
+}
+.advanced-search {
+  background-color: var(--background-color);
+  color: var(--color);
+}
+.recipe-container {
+  background-color: var(--background-color);
+  color: var(--color);
+}
+.card-body {
+  background-color: var(--card-background-color);
+}
+.mb-2.text-muted.card-subtitle.h6 {
+  color: var(--mb-2-color)!important;
+}
+.search-results {
+  background-color: var(--background-color);
+  color: var(--color);
+}
