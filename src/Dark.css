@@ -39,3 +39,7 @@
 .mb-2.text-muted.card-subtitle.h6 {
   color: var(--mb-2-color)!important;
 }
+.search-results {
+  background-color: var(--background-color);
+  color: var(--color);
+}

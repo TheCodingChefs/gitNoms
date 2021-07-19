@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 
 import Recipe from '../display/recipe/Recipe';
 
-const Search = ({search}) => {
+const Search = ({search, darkMode}) => {
 
     const API_URL = 'https://git-noms-api.herokuapp.com/recipes';
 
@@ -66,7 +66,7 @@ const Search = ({search}) => {
 
 
     return (
-        <div className="search-results">
+        <div className="search-results" theme={darkMode ? "dark" : "light"}>
             {filterResults.map((recipe) => {
                 return(
                     <Recipe recipe={recipe} />
