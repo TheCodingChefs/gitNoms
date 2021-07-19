@@ -29,7 +29,10 @@ const Display = ({darkMode}) => {
                     <Recipe getRecipes= {getRecipes}recipe={recipe} />
                 )
             })}
+
+
         </div>
+    
     );
 };
 

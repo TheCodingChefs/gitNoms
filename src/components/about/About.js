@@ -3,6 +3,7 @@ import stevenProfile from '../../assets/stevenProfile.jpg'
 import woosikProfile from '../../assets/woosikProfile.jpg'
 import collenProfile from '../../assets/collenProfile.jpg'
 import anselemProfile from '../../assets/anselemProfile.png'
+import { BiCopyright } from "react-icons/bi";
 
 function About({darkMode}) {
     
@@ -49,6 +50,9 @@ function About({darkMode}) {
                     </div>
                 </div>
             </div>
+                    <div className="About-footer">
+                        <h4 className="About-Footer-Text"><BiCopyright className="Copy-Right"/>Copyright 2021 </h4><h4 className="About-Footer-Text-2">All rights reserved. Created By The Coding Chefs </h4>
+                    </div>
         </div>
 
     );
