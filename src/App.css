@@ -46,8 +46,8 @@ body {
     grid-auto-rows: minmax(250px, auto);
     grid-gap: 1rem;
     margin: 0 auto;
-
     margin-top: 50px;
+
     max-width: 1200px;
     padding-top: 110px;
     padding-bottom: 25px;
@@ -72,6 +72,10 @@ body {
 
 .card {
     border: 3px solid black;
+}
+
+.card-body {
+    border: 2px solid black;
 }
 
 .add-form {
