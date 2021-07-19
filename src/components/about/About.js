@@ -51,8 +51,7 @@ function About({darkMode}) {
                 </div>
             </div>
                     <div className="About-footer">
-                        <h4 className="About-Footer-Text"><BiCopyright className="Copy-Right"/>Copyright 2021 </h4> 
-                        <h4 className="About-Footer-Text-2">All rights reserved. Created By The Coding Chefs </h4>
+                        <h4 className="About-Footer-Text"><BiCopyright className="Copy-Right"/>Copyright 2021 </h4><h4 className="About-Footer-Text-2">All rights reserved. Created By The Coding Chefs </h4>
                     </div>
         </div>
 
