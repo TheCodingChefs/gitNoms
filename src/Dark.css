@@ -36,5 +36,5 @@
   background-color: var(--card-background-color);
 }
 .mb-2.text-muted.card-subtitle.h6 {
-  color: var(--mb-2-color);
+  color: var(--mb-2-color)!important;
 }
