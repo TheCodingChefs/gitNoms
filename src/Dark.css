@@ -10,16 +10,21 @@
   [theme="dark"] {
     --background-color: #3F3F3F;
     --color: #fff;
-    /* --card-color: #8d8d8d; */
+    --card-background-color: #8d8d8d;
+    --mb-2-color: black;
   }
   [theme="light"] {
     --background-color: burlywood;
+    --card-background-color: white;
   }
 
   .about {
     background-color: var(--background-color);
     color: var(--color);
   }
+  .steven, .woosik, .collen, .anselem {
+    background-color: var(--card-background-color);
+}
   .add-form {
     background-color: var(--background-color);
     color: var(--color);
@@ -31,4 +36,10 @@
   .recipe-container {
     background-color: var(--background-color);
     color: var(--color);
+  }
+  .card-body {
+    background-color: var(--card-background-color);
+  }
+  .mb-2.text-muted.card-subtitle.h6 {
+    color: var(--mb-2-color);
   }
