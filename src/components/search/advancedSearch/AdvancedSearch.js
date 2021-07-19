@@ -3,7 +3,7 @@ import Button from 'react-bootstrap/Button';
 
 import { useState } from 'react';
 
-const AdvancedSearch = () => {
+const AdvancedSearch = ({darkMode}) => {
 
     const [allergens, setAllergens] = useState([]);
 
@@ -27,7 +27,7 @@ const AdvancedSearch = () => {
     }
     
     return (
-        <div className='advanced-search'>
+        <div className='advanced-search' theme={darkMode ? "dark" : "light"}>
             <form action="">
             <div className='allergen-buttons'>
                 {allergensArr.map((allergen) => {
