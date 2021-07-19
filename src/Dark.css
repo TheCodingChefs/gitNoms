@@ -8,6 +8,7 @@
 [theme="light"] {
   --background-color: burlywood;
   --card-background-color: white;
+  --mb-2-color: #6c757d;
 }
 
 .about {
