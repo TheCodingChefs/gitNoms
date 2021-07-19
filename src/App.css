@@ -50,6 +50,7 @@ body {
     margin-top: 50px;
     max-width: 1200px;
     padding-top: 110px;
+    padding-bottom: 50px;
 }
 
 .App {
@@ -159,4 +160,13 @@ body {
     text-align: center;
     padding-bottom: 1rem;
     margin-top: 100px;
+}
+
+
+/* Footer */
+
+.footer1 {
+    font-size: 30px;
+    margin-bottom: -10px;
+   
 }
