@@ -2,6 +2,7 @@ import { Nav, Navbar, Container } from "react-bootstrap";
 import logo from '../../assets/logodark.png'
 import { useState } from 'react';
 import { useHistory } from "react-router";
+import darkmode from '../../assets/darkmode.png';
 
 import Search from "../search/Search";
 
@@ -30,6 +31,7 @@ export default function Navigation( {setSearch, search, toggleDarkMode} ) {
                     </form>
                     <button onClick={toggleDarkMode}>
                     {/* {darkMode ? "Light Mode" : "Dark Mode"} */}
+                    <img src={darkmode} alt='dark mode and light mode switch' width='50px' height='auto' />
                     </button>
                 </Nav>
             </Container>
