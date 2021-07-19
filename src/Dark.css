@@ -11,6 +11,7 @@
     --background-color: #3F3F3F;
     --color: #fff;
     --card-background-color: #8d8d8d;
+    --mb-2-color: black;
   }
   [theme="light"] {
     --background-color: burlywood;
@@ -39,6 +40,6 @@
   .card-body {
     background-color: var(--card-background-color);
   }
-  .card-subtitle {
-    color: var(--card-subtitle-color);
+  .mb-2 {
+    color: var(--mb-2-color);
   }
