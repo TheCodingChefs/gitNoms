@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 import Recipe from "./recipe/Recipe";
 
-const Display = () => {
+const Display = ({darkMode}) => {
     const API_URL = 'https://git-noms-api.herokuapp.com/recipes';
     const [recipeData, setRecipeData] = useState([]);
 
@@ -23,7 +23,7 @@ const Display = () => {
 
     }, []);
     return (
-        <div className="recipe-container">
+        <div className="recipe-container" theme={darkMode ? "dark" : "light"}>
             {recipeData.map((recipe) => {
                 return(
                     <Recipe getRecipes= {getRecipes}recipe={recipe} />
