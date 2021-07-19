@@ -50,7 +50,7 @@ body {
     margin-top: 50px;
     max-width: 1200px;
     padding-top: 110px;
-    padding-bottom: 50px;
+    padding-bottom: 25px;
 }
 
 .App {
@@ -180,9 +180,6 @@ body {
     justify-content: "center";
     font-size: 1rem;
     margin-top: px;
-    /* margin-bottom: 2px; */
-    /* height: 15px; */
-    /* width:  */
     width: 100%;
   }
   .About-Footer-Text-2 {
