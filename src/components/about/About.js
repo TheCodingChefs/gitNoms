@@ -16,7 +16,7 @@ function About({darkMode}) {
             <div className='gitNoms'>
                 <h2>gitNoms</h2>
 
-                <p className="about-text">Living in this pandemic World, more and more people are embracing home made meals. The gitNoms is an online recipe application that enables users to easily upload, edit, or delete their own recipes. The gitNoms is built by the Coding Chefs from (4) different time zones!
+                <p className="about-text">Living in this pandemic World, more and more people are embracing home made meals. The gitNoms is an online recipe application that enables users to easily upload, edit, or delete their own recipes. The gitNoms is built by the Coding Chefs from (4) four different time zones!
 
                 </p>
             </div>
