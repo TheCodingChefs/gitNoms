@@ -28,7 +28,7 @@ body {
 }
 
 @keyframes mrChef {
-    from {left: -10px;}
+    from {left: -25px;}
     to {left: 25px;}
 }
 
@@ -101,6 +101,7 @@ body {
     padding-top: 100px;
     font-size: 19px;
     font-weight: 600;
+    
 }
 
 .about-text {
@@ -193,7 +194,7 @@ body {
 .About-footer {
     display:grid;
    width: 100%; 
-   border: 1px solid black;
+   border: 0.5px solid rgb(0, 0, 0);
    align-content: center;
    background-color: white;
    
