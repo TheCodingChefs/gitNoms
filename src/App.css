@@ -61,6 +61,7 @@ body {
 .App {
     /* background-color: rgb(160, 53, 53); */
     /* background:repeating-linear-gradient(rgb(190, 141, 50), rgb(248, 247, 245)); */
+    background: repeating-linear-gradient(rgb(113, 142, 221) 30%, rgb(221, 221, 75) 30%, green 30%);
     
 }
 
