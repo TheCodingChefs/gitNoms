@@ -60,7 +60,8 @@ body {
 
 .App {
     /* background-color: rgb(160, 53, 53); */
-    background:repeating-linear-gradient(rgb(190, 141, 50), rgb(248, 247, 245));
+    /* background:repeating-linear-gradient(rgb(190, 141, 50), rgb(248, 247, 245)); */
+    background: repeating-linear-gradient(rgb(157, 178, 236), rgb(221, 221, 75), rgb(163, 211, 163) );
     
 }
 
@@ -131,6 +132,7 @@ body {
     flex-direction: column;
     text-align: left;
     margin-left: 30px;
+    background-color: rgb(211, 205, 211);
 }
 
 .navbar {
@@ -151,6 +153,7 @@ body {
 
 .addContainer {
     margin-bottom: 10px;
+    background-color: browns;
 }
 
 .allergen-buttons {
