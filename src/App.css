@@ -72,9 +72,7 @@ body {
 }
 
 .App {
-    /* background-color: rgb(160, 53, 53); */
-    /* background:repeating-linear-gradient(rgb(190, 141, 50), rgb(248, 247, 245)); */
-    background: repeating-linear-gradient(rgb(157, 178, 236), rgb(221, 221, 75), rgb(163, 211, 163) );
+    background: repeating-linear-gradient(rgb(197, 210, 241), rgb(235, 235, 106), rgb(163, 211, 155) );
     
 }
 
@@ -177,9 +175,6 @@ body {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    /* display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; */
 }
 
 .advanced-search{

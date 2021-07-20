@@ -53,7 +53,7 @@ export default function Add({darkMode}) {
             if (response.status === 201) {
                 history.push('/');
                 setValues(initialFormState)
-                //GET RECPIES?//
+                //GET RECIPES?//
             }
         } catch (err) {
             console.log(err)
