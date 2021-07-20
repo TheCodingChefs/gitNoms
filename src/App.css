@@ -7,6 +7,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    
 }
 
 .gitNoms {
@@ -16,7 +17,19 @@ body {
 
 .theCodingChefs {
     padding: 30px;
-    margin: 60px
+    margin: 60px;
+    
+  
+}
+
+.mrChef {
+    position: relative;
+    animation: mrChef 5s infinite;
+}
+
+@keyframes mrChef {
+    from {left: -10px;}
+    to {left: 25px;}
 }
 
 .theCodingChefs h2, .gitNoms h2 {

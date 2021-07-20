@@ -21,7 +21,7 @@ function About({darkMode}) {
                 </p>
             </div>
             <div className='theCodingChefs'>
-                <img src={chef} alt='the coding chefs logo' width='300px' height='300px' />
+                <img src={chef} alt='the coding chefs logo' width='300px' height='300px' className="mrChef"/>
                 <h2>Introducing the Coding Chefs Team!</h2>
                 <div className='teamMembers'>
                     <div className='steven'>
