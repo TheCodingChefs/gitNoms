@@ -3,10 +3,11 @@
   --background-color: #3f3f3f;
   --color: #fff;
   --card-background-color: rgb(102, 79, 49);
+  
   --mb-2-color: #bcc0a5;
 }
 [theme="light"] {
-  --background-color: burlywood;
+  --background-color: repeating-linear-gradient(rgb(34, 197, 116), rgb(219, 219, 206) 10%, green 20%);
   --card-background-color: white;
   --mb-2-color: #6c757d;
 }
