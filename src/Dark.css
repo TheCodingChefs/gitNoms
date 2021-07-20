@@ -7,8 +7,8 @@
   --mb-2-color: #bcc0a5;
 }
 [theme="light"] {
-  --background-color: repeating-linear-gradient rgb(233, 203, 164);
-  --card-background-color: white;
+  /* --background-color:  rgb(233, 203, 164); */
+  --card-background-color: rgb(243, 243, 243);
   --mb-2-color: #6c757d;
 }
 
